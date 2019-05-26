@@ -59,6 +59,34 @@
 			}
 		},
 		{
+			"name": "Functions",
+			"scope": [
+				"functions",
+			],
+			"settings": {
+				"foreground": "#FFF29A"
+			}
+		},
+		{
+			"name": "Methods",
+			"scope": [
+				"methods",
+			],
+			"settings": {
+				"foreground": "#A1FA97"
+			}
+		},
+		{
+			"name": "Constants",
+			"scope": [
+				"constants",
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#53F1E6"
+			}
+		},
+		{
 			"name": "Comment",
 			"scope": [
 				"comment",

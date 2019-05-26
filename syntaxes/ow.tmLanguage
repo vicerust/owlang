@@ -52,6 +52,24 @@
         </dict>
         <dict>
           <key>match</key>
+          <string>(Absolute Value|Add|Allowed Heroes|Altitude Of|And|Angle Difference|Append To Array|Array Contains|Array Slice|Closest Player To|Compare|Cosine From Degrees|Cosine From Radians|Count Of|Cross Product|Current Array Element|Direction From Angles|Direction Towards|Distance Between|Divide|Dot Product|Entity Exists|Eye Position|Facing Direction Of|Farthest Player From|Filtered Array|First Of|Global Variable|Has Spawned|Has Status|Health|Health Percent|Hero|Hero Icon String|Hero Of|Horizontal Angle From Direction|Horizontal Angle Towards|Horizontal Facing Angle Of|Horizontal Speed Of|Index Of Array Value|Is Alive|Is Button Held|Is Communicating|Is Communicating Any|Is Communicating Any Emote|Is Communicating Any Voice Line|Is Crouching|Is Dead|Is Firing Primary|Is Firing Secondary|Is In Air|Is In Line Of Sight|Is In Spawn Room|Is In View Angle|Is Moving|Is On Ground|Is On Objective|Is On Wall|Is Portrait On Fire|Is Standing|Is True For All|Is True For Any|Is Using Ability 1|Is Using Ability 2|Is Using Ultimate|Last Of|Local Vector Of|Max|Max Health|Min|Modulo|Multiply|Nearest Walkable Position|Normalize|Not|Number|Number Of Deaths|Number Of Eliminations|Number Of Final Blows|Opposite Team Of|Or|Player Closest To Reticle|Player Variable|Players In Slot|Players In View Angle|Players Within Radius|Position Of|Raise To Power|Random Integer|Random Real|Random Value In Array|Randomized Array|Ray Cast Hit Normal|Ray Cast Hit Player|Ray Cast Hit Position|Remove From Array|Round To Integer|Score Of|Sine From Degrees|Sine From Radians|Slot Of|Sorted Array|Speed Of|Speed Of In Direction|Square Root|String|Subtract|Team|Team Of|Team Score|Throttle Of|Ultimate Charge Percent|Value In Array|Vector|Vector Towards|Velocity Of|Vertical Angle From Direction|Vertical Angle Towards|Vertical Facing Angle Of|Vertical Speed Of|World Vector Of|X Component Of|Y Component Of|Z Component Of)</string>
+          <key>name</key>
+          <string>keyword functions.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(Abort|Abort If|Abort If Condition Is False|Abort If Condition Is True|Allow Button|Apply Impulse|Big Message|Chase Global Variable At Rate|Chase Global Variable Over Time|Chase Player Variable At Rate|Chase Player Variable Over Time|Clear Status|Communicate|Create Effect|Create HUD Text|Create Icon|Create In-World Text|Damage|Declare Match Draw|Declare Player Victory|Declare Round Victory|Declare Team Victory|Destroy All Effects|Destroy All HUD Text|Destroy All Icons|Destroy All In-World Text|Destroy Effects|Destroy HUD Text|Destroy Icons|Destroy In-World Text|Disable Built-In Game Mode Announcer|Disable Built-In Game Mode Completion|Disable Built-In Game Mode Music|Disable Built-In Game Mode Respawning|Disable Built-In Game Mode Scoring|Disable Death Spectate All Players|Disable Death Spectate Target HUD|Disallow Button|Enable Built-In Game Mode Announcer|Enable Built-In Game Mode Completion|Enable Built-In Game Mode Music|Enable Built-In Game Mode Respawning|Enable Built-In Game Mode Scoring|Enable Death Spectate All Players|Enable Death Spectate Target HUD|Go To Assemble Heroes|Heal|Kill|Loop|Loop If|Loop If Condition Is True|Loop If Condition Is False|Modify Global Variable|Modify Global Variable At Index|Modify Player Score|Modify Player Variable|Modify Player Variable At Index|Modify Team Score|Pause Match Time|Play Effect|Preload Hero|Press Button|Reset Player Hero Availability|Respawn|Resurrect|Set Ability 1 Enabled|Set Ability 2 Enabled|Set Aim Speed|Set Damage Dealt|Set Damage Received|Set Facing|Set Global Variable|Set Global Variable At Index|Set Gravity|Set Healing Dealt|Set Invisible|Set Match Time|Set Max Health|Set Move Speed|Set Objective Description|Set Player Allowed Heroes|Set Player Score|Set Player Variable|Set Player Variable At Index|Set Primary Fire Enabled|Set Projectile Gravity|Set Projectile Speed|Set Respawn Max Time|Set Secondary Fire Enabled|Set Slow Motion|Set Status|Set Team Score|Set Ultimate Ability Enabled|Set Ultimate Charge|Skip|Skip If|Small Message|Start Accelerating|Start Camera|Start Damage Modification|Start Damage Over Time|Start Facing|Start Forcing Player To Be Hero|Start Forcing Spawn Room|Start Forcing Throttle|Start Heal Over Time|Start Holding Button|Stop Accelerating|Stop All Damage Modifications|Stop All Damage Over Time|Stop All Heal Over Time|Stop Camera|Stop Chasing Global Variable|Stop Chasing Player Variable|Stop Damage Modification|Stop Damage Over Time|Stop Facing|Stop Forcing Player To Be Hero|Stop Forcing Spawn Room|Stop Forcing Throttle|Stop Heal Over Time|Stop Holding Button|Teleport|Unpause Match Time|Wait)</string>
+          <key>name</key>
+          <string>keyword methods.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(All|Any|Team 1|Team 2|Slot 0|Slot 1|Slot 2|Slot 3|Slot 4|Slot 5|Slot 6|Slot 7|Slot 8|Slot 9|Slot 10|Slot 11|Reaper|Tracer|Mercy|Hanzo|Torbjorn|Reinhardt|Pharah|Winston|Widowmaker|Bastion|Symmetra|Zenyatta|Genji|Roadhog|McCree|Junkrat|Zarya|Soldier: 76|Lucio|D.Va|Mei|Sombra|Doomfist|Ana|Orisa|Brigitte|Moira|Wrecking Ball|Ashe|Baptiste|Voice Line Up|Voice Line Left|Voice Line Right|Voice Line Down|Emote Up|Emote Left|Emote Right|Emote Down|Ultimate Status|Hello|Need Healing|Group Up|Thanks|Acknowledge|All Dead Players|All Heroes|All Living Players|All Players|All Players Not On Objective|All Players On Objective|All Teams|Attacker|Backward|Control Mode Scoring Percentage|Control Mode Scoring Team|Down|Empty Array|Event Damage|Event Player|Event Was Critical Hit|False|Flag Position|Forward|Is Control Mode Point Locked|Is CTF Mode In Sudden Death|Is Flag At Base|Is Flag Being Carried|Is Game In Progress|Is Hero Being Played|Is In Setup|Is Match Complete|Is Objective Complete|Is Team On Defense|Is Team On Offense|Is Waiting For Players|Last Created Entity|Last Damage Modification ID|Last Damage Over Time ID|Last Heal Over Time ID|Last Text ID|Left|Match Round|Match Time|Null|Number Of Dead Players|Number Of Heroes|Number Of Living Players|Number Of Players|Number Of Players On Objective|Objective Index|Objective Position|Payload Position|Payload Progress Percentage|Player Carrying Flag|Players On Hero|Point Capture Percentage|Right|Total Time Elapsed|True|Up|Victim)</string>
+          <key>name</key>
+          <string>keyword constants.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
           <string>(rule)</string>
           <key>name</key>
           <string>keyword rule.overwatch</string>
@@ -191,10 +209,20 @@
           <string>#numeric</string>
         </dict>
         <dict>
+          <key>include</key>
+          <string>#main</string>
+        </dict>
+        <dict>
           <key>match</key>
           <string>(,)</string>
           <key>name</key>
           <string>punctuation.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(Filtered)</string>
+          <key>name</key>
+          <string>keyword functions.overwatch</string>
         </dict>
        </array>
     </dict>
