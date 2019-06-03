@@ -12,7 +12,18 @@
 		"url": "https://github.com/Microsoft/vscode-extension-samples"
 	},
 	"dependencies": {
-		"vscode-languageserver": "^4.1.3"
+		"request-light": "^0.2.4",
+		"vscode-json-languageservice": "^3.2.0",
+		"vscode-languageserver": "^4.1.3",
+		"vscode-languageserver-types": "^3.14.0"
 	},
-	"scripts": {}
+	"scripts": {
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"ts-loader": "^6.0.1",
+		"typescript": "^3.4.5",
+		"webpack": "^4.32.2",
+		"webpack-cli": "^3.3.2"
+	}
 }
