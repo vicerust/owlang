@@ -18,7 +18,7 @@ import {
 	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind
 } from 'vscode-languageserver-types';
 
-import { getCompletionItems, resolveCompletionItem } from './overwatch'
+import { getCompletionItems, resolveCompletionItem, hoverHandler} from './overwatch'
 
 const connection: IConnection = createConnection(	
 	new IPCMessageReader(process),
@@ -62,10 +62,10 @@ connection.onHover(
 
 		let pos = params.position;
 	
-		let offset = doc.offsetAt(pos);
-
+		var contents = hoverHandler(pos, doc);
+		
 		return {
-			contents: "hello"
+			contents: contents
 		}
 	}
 )
