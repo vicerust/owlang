@@ -18,7 +18,7 @@ import {
 	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind
 } from 'vscode-languageserver-types';
 
-import { getCompletionItems } from './overwatch'
+import { getCompletionItems, resolveCompletionItem } from './overwatch'
 
 const connection: IConnection = createConnection(	
 	new IPCMessageReader(process),
@@ -28,6 +28,8 @@ const connection: IConnection = createConnection(
 const documents: TextDocuments = new TextDocuments()
 documents.listen(connection)
   
+const completionItems = getCompletionItems();
+
 connection.onInitialize((params): InitializeResult => {
 	return {
 	  capabilities: {
@@ -47,28 +49,8 @@ connection.onDidChangeWatchedFiles(change => {
 
 connection.onCompletion(
 	(): CompletionItem[] => {
-		let markdown: MarkupContent = {
-			kind: MarkupKind.Markdown,
-			value: [
-				'## Distance Between',
-				'Distance Between takes two positions (`Vectors`) and calculates the distance (`Number`) between them.',
-				'**Returns a `Number`**',
-			].join('\n')
-		};
 
-		return [
-			{
-				label: 'Distance Between',
-				kind: 1,
-				detail: 'Distance Between( Vector, Vector ) : Number',
-				documentation: markdown,
-			},
-			{
-				label: 'JavaScript',
-				kind: 1,
-				data: 2
-			}
-		]
+		return completionItems
 
 	}
 )
@@ -89,16 +71,9 @@ connection.onHover(
 )
 
   
-/*connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-	if (item.data === 1) {
-		item.detail = 'TypeScript details'
-		item.documentation = 'TypeScript documentation'
-	} else if (item.data === 2) {
-		item.detail = 'JavaScript details'
-		item.documentation = 'JavaScript documentation'
-	}
-	return item
-})*/
+connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
+	return resolveCompletionItem(item.data)
+})
 
   
 connection.onDidChangeTextDocument(params => {
