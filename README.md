@@ -31,7 +31,7 @@ Currently not planning on doing any type of preprocessing (except possibly for c
 
 - [x] [Set up Autocomplete](https://streamable.com/oo22t)
 - [x] Basic syntax highlighting w/ custom theme
-- [ ] Hook up `connection.onCompletion` to JSON syntax file
+- [x] Hook up `connection.onCompletion` to JSON syntax file
 - [ ] Populate syntax database
 - [ ] Full syntax highlighting
 - [ ] Write tooltips
