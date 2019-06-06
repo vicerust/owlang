@@ -35,6 +35,9 @@ connection.onInitialize((params): InitializeResult => {
 	  capabilities: {
 		textDocumentSync: TextDocumentSyncKind.Full,
 		hoverProvider: true,
+		signatureHelpProvider: {
+			triggerCharacters: ['('],
+	  	},
 		completionProvider: {
 		  resolveProvider: true
 		}

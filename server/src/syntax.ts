@@ -1,4 +1,4 @@
-import {CompletionItemKind} from 'vscode-languageserver-types'
+import {CompletionItemKind, MarkupContent} from 'vscode-languageserver-types'
 
 export var OWKind = {
 	Wildcard: 0,
@@ -9,7 +9,7 @@ export var OWKind = {
 
 export interface Syntax {
 	label: string,
-	detail: string,
+	detail?: string,
 	documentation?: string[],
 	kind: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25,
 	args?: object[] | null,
@@ -21,9 +21,9 @@ export interface Syntax {
 export var Syntax: Syntax[] = [
 	{
 		label: "Distance Between",
-		detail: "Distance Between(Vector, Vector)",
 		documentation: [
-			'### Distance Between',
+			`\`\`\`ow\nDistance Between(Vector, Hero)\n\`\`\``,
+			'------',
 			'Distance Between takes two positions (`Vectors`) and calculates the distance (`Number`) between them.',
 			'**Returns a `Number`**',
 		],

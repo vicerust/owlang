@@ -87,6 +87,45 @@
 			}
 		},
 		{
+			"name": "Player Type",
+			"scope": [
+				"playertype",
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#FFA0AC"
+			}
+		},
+		{
+			"name": "Hero Type",
+			"scope": [
+				"herotype",
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#FEFFA5"
+			}
+		},
+		{
+			"name": "Vector Type",
+			"scope": [
+				"vectortype",
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#B4DC7F"
+			}
+		},
+		{
+			"name": "Event Player",
+			"scope": [
+				"eventplayer",
+			],
+			"settings": {
+				"foreground": "#9b9b9b"
+			}
+		},
+		{
 			"name": "Comment",
 			"scope": [
 				"comment",
@@ -691,6 +730,16 @@
 			"settings": {
 				"foreground": "#EEFFFF"
 			}
-		}
+		},
+		{
+			"name": "Variable",
+			"scope": [
+				"variable",
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#fdffee"
+			}
+		},
 	]
 }
