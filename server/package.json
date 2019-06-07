@@ -12,6 +12,9 @@
 		"url": "https://github.com/Microsoft/vscode-extension-samples"
 	},
 	"dependencies": {
+		"g2-bracket-parser": "^2.0.0",
+		"node-balanced": "0.0.14",
+		"parenthesis": "^3.1.6",
 		"request-light": "^0.2.4",
 		"vscode-json-languageservice": "^3.2.0",
 		"vscode-languageserver": "^4.1.3",

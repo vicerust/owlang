@@ -1,5 +1,5 @@
 import * as path from 'path'
-import * as vscode from 'vscode'
+import { workspace, Disposable, ExtensionContext } from 'vscode';
 
 import {
   LanguageClient,
@@ -8,8 +8,7 @@ import {
   TransportKind
 } from 'vscode-languageclient'
 
-export function activate(context: vscode.ExtensionContext) {
-  console.log("activated")
+export function activate(context: ExtensionContext) {
   const serverModule = context.asAbsolutePath(path.join('server', 'out', 'server.js'))
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6006'] }
 
@@ -27,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
       { scheme: 'file', language: 'ow' },
     ],
     synchronize: {
-      configurationSection: []
+      configurationSection: ['Overwatch'],
     }
   }
 

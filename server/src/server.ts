@@ -15,26 +15,26 @@ import {
 
 import {
 	TextDocument, Position, CompletionList, Range, SymbolInformation, Diagnostic,
-	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind
+	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind, DocumentSymbolParams, SymbolKind
 } from 'vscode-languageserver-types';
 
-import { getCompletionItems, resolveCompletionItem, hoverHandler} from './overwatch'
+import { getCompletionItems, resolveCompletionItem, hoverHandler, resolveSymbols} from './overwatch'
 
 const connection: IConnection = createConnection(	
 	new IPCMessageReader(process),
 	new IPCMessageWriter(process)
   )
 
-const documents: TextDocuments = new TextDocuments()
-documents.listen(connection)
+var documents: TextDocuments = new TextDocuments();
   
 const completionItems = getCompletionItems();
 
 connection.onInitialize((params): InitializeResult => {
 	return {
 	  capabilities: {
-		textDocumentSync: TextDocumentSyncKind.Full,
+		textDocumentSync: documents.syncKind,
 		hoverProvider: true,
+		documentSymbolProvider: true,
 		signatureHelpProvider: {
 			triggerCharacters: ['('],
 	  	},
@@ -45,6 +45,10 @@ connection.onInitialize((params): InitializeResult => {
 	}
 })
   
+
+documents.onDidChangeContent((change) => {
+	console.log(change);
+})
 connection.onDidChangeWatchedFiles(change => {
 	console.log('didChangeWatchedFiles')
 })
@@ -67,11 +71,22 @@ connection.onHover(
 	
 		var contents = hoverHandler(pos, doc);
 		
+		
 		return {
 			contents: contents
 		}
 	}
 )
+
+
+connection.onDocumentSymbol((params: DocumentSymbolParams) : SymbolInformation[] => {
+	var doc = documents.get(params.textDocument.uri);
+	if(doc==null) {return []}
+
+	var symbols = resolveSymbols(params.textDocument.uri, doc)
+	return symbols;
+})
+
 
   
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
@@ -80,8 +95,8 @@ connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
 
   
 connection.onDidChangeTextDocument(params => {
-	console.log(`${params.textDocument.uri} changed`)
-	console.log(`${JSON.stringify(params.contentChanges, null, 2)}`)
+
 })
-  
+documents.listen(connection)
+
 connection.listen()
