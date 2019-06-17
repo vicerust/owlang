@@ -11,6 +11,7 @@ import {
 	TextDocumentSyncKind,
 	Hover,
 	CancellationToken,
+	CompletionParams,
 } from 'vscode-languageserver'
 
 import {
@@ -18,7 +19,7 @@ import {
 	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind, DocumentSymbolParams, SymbolKind, SignatureHelp
 } from 'vscode-languageserver-types';
 
-import { getCompletionItems, resolveCompletionItem, hoverHandler, resolveSymbols, signatureHelp} from './overwatch'
+import { getCompletionItems, resolveCompletionItem, hoverHandler, resolveSymbols, signatureHelp, completionRequiresContext, getCompletionItemsWithContext} from './overwatch'
 
 const connection: IConnection = createConnection(	
 	new IPCMessageReader(process),
@@ -55,10 +56,21 @@ connection.onDidChangeWatchedFiles(change => {
 
 
 connection.onCompletion(
-	(): CompletionItem[] => {
-
-		return completionItems
-
+	(params: CompletionParams): CompletionItem[] => {
+		var doc = documents.get(params.textDocument.uri);
+		if(doc == null) { return [] }
+		var types = completionRequiresContext(doc, params.position);
+		
+		if(types != false){
+			return types.map((d) : CompletionItem => {
+				return {
+					label: d as string,
+					kind: CompletionItemKind.Constant,
+				}
+			})
+		} else {
+			return completionItems
+		}
 	}
 )
 

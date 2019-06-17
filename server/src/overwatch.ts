@@ -75,6 +75,29 @@ export function getCompletionItems() {
 }
 
 
+export function completionRequiresContext(doc: TextDocument, pos: Position) {
+
+	var {matchLabel, argNumber} = getSignatureInfo(doc, pos)
+
+	if(matchLabel==null||argNumber==null){
+		return false
+	}
+
+	var signature = owAll.find((d) => d.name==matchLabel)
+	if(signature == null || signature.args == null){return false}
+	//@ts-ignore
+	var typeRef = ow.types.find((d) => d.name == signature.args[argNumber].type)
+
+	//@ts-ignore
+	var items = [...typeRef.extends.filter((d) => d != "Any").map((d) => ow.types.find((e) => e.name == d).values).flat(), ...typeRef.values]
+
+	return items
+}
+
+export function getCompletionItemsWithContext() {
+	return [] as CompletionItem[]
+}
+
 export function resolveCompletionItem(item: CompletionItem): CompletionItem {
 
 	let CompletedItem: CompletionItem = owAll.filter((d)=>d.name==item.label).map((d) : CompletionItem => {
@@ -100,7 +123,8 @@ export function resolveCompletionItem(item: CompletionItem): CompletionItem {
 }
 
 
-export function signatureHelp(params: TextDocumentPositionParams, doc: TextDocument, pos: Position) : SignatureHelp {
+function getSignatureInfo(doc: TextDocument, pos: Position) : looseObj {
+	try{
 	var parseToLastRE = new RegExp(/[^(,]*\(___\d___\)/)
 	var matches = [];
 
@@ -109,7 +133,7 @@ export function signatureHelp(params: TextDocumentPositionParams, doc: TextDocum
 		end: { line: pos.line, character: 999999 }
 	});
 
-	var sliced = text.slice(0, params.position.character)
+	var sliced = text.slice(0, pos.character)
 
 	var parsed = parse(sliced, {
 		brackets: ['()'],
@@ -135,11 +159,28 @@ export function signatureHelp(params: TextDocumentPositionParams, doc: TextDocum
 		var argNumber  = 0;
 	} else {
 		var argStrMatch = argStr.match(/,/g);
-		if(argStrMatch==null) {return {} as SignatureHelp}
-		var argNumber = argStrMatch.length
+		if(argStrMatch==null) {
+			var argNumber = 0;
+		} else {
+			var argNumber = argStrMatch.length
+		}
 	}
 
 	var matchLabel = matches[matches.length-1].match.slice(0, matches[matches.length-1].match.length - 1)
+
+	return {
+		matchLabel: matchLabel,
+		argNumber: argNumber
+	}
+
+	} catch (e) {
+		return {matchLabel: null, argNumber: null}
+	}
+}
+
+export function signatureHelp(params: TextDocumentPositionParams, doc: TextDocument, pos: Position) : SignatureHelp {
+	var { matchLabel, argNumber } = getSignatureInfo(doc, pos);
+	if(matchLabel==null||argNumber==null) {return {} as SignatureHelp}
 
 	var signature = owAll.find((d) => d.name==matchLabel)
 	if(signature==null){return {} as SignatureHelp}
