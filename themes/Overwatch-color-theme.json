@@ -79,41 +79,39 @@
 		{
 			"name": "Constants",
 			"scope": [
-				"constants",
+				"constant",
 			],
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#53F1E6"
+				"foreground": "#7dc9c4"
 			}
 		},
 		{
-			"name": "Player Type",
+			"name": "Types",
 			"scope": [
-				"playertype",
+				"type",
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#FFA0AC"
+				"foreground": "#5373f1"
 			}
 		},
 		{
-			"name": "Hero Type",
+			"name": "Keys",
 			"scope": [
-				"herotype",
+				"keys",
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#FEFFA5"
+				"foreground": "#ee7575"
 			}
 		},
 		{
-			"name": "Vector Type",
+			"name": "String",
 			"scope": [
-				"vectortype",
+				"string",
 			],
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#B4DC7F"
+				"foreground": "#e28546"
 			}
 		},
 		{

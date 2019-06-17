@@ -1,0 +1,179 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0" >
+<!-- Generated via Iro -->
+<dict>
+  <key>fileTypes</key>
+  <array> 
+    <string>ow</string>
+   </array>
+  <key>name</key>
+  <string>overwatch</string>
+  <key>patterns</key>
+  <array> 
+    <dict>
+      <key>include</key>
+      <string>#main</string>
+    </dict>
+   </array>
+  <key>scopeName</key>
+  <string>source.overwatch</string>
+  <key>uuid</key>
+  <string></string>
+  <key>repository</key>
+  <dict>
+    <key>main</key>
+    <dict>
+      <key>patterns</key>
+      <array> 
+        <dict>
+          <key>match</key>
+          <string>(conditions)</string>
+          <key>name</key>
+          <string>keyword conditions.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(actions)</string>
+          <key>name</key>
+          <string>keyword actions.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(event)</string>
+          <key>name</key>
+          <string>keyword event.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(Ongoing - Each Player|Player earned elimination)</string>
+          <key>name</key>
+          <string>keyword subevent.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>((Condition|Player|Button|Direction|Speed|Relative|Motion|Visible To|Header|Variable|Destination|Rate|Reevaluation|Duration|Status|Type|Color|Position|Radius|Subheader|Text|Location|Sort Order|Header Color|Subheader Color|Text Color|Icon|Show When Offscreen|Scale|Clipping|Damager|Amount|Round Winning Team|Team|Entity|Text Id|Players|Healer|Killer|Operation|Value|Score|Hero|Enabled|Turn Speed Percent|Damage Dealt Percent|Damage Received Percent|Index|Gravity Percent|Healing Dealt Percent|Healing Received Percent|Invisible To|Time|Health Percent|Move Speed Percent|Projectile Gravity Percent|Projectile Speed Percent|Speed Percent|Assister|Charge Percent|Number Of Actions|Max Speed|Eye Position|Look At Position|Blend Speed|Receivers|Damagers|Damage Percent|Damage Per Second|Turn Rate|Room|Min Forward|Max Forward|Min Backward|Max Backward|Min Sideways|Max Sideways|Healing Per Second|Damage Modification|Damage Over Time Id|Heal Over Time Id|Wait Behavior|Angle|Array|Start Index|Count|Center|Comparison|Horizontal Angle|Vertical Angle|Start Pos|End Pos|Barriers|View Angle|Number|World Vector|Relative Player|Transformation|Vector|Slot|Los Check|Min|Max|Players To Include|Players To Exclude|Include Player Owned Objects|Rounding Type|Value Rank|String|\{0\}|\{1\}|\{2\}|X|Y|Z|Local Vector):)</string>
+          <key>name</key>
+          <string>constant.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(&quot;(¿\{0\}\?|¡\{0\}!|\{0\}\?\?\?|\{0\}\?\?|\{0\}\?|\{0\}\, \{1\}|\{0\}:\{1\}|\{0\}:\{1\}|\{0\}: \{1\} And \{2\}|\{0\}: \{1\}|\{0\}:|\{0\}%|\{0\}!!!|\{0\}!!|\{0\}!|\{0\} \{1\} \{2\}|\{0\} \-&gt; \{1\}|\{0\} \-&gt;|\{0\} \- \{1\} \- \{2\}|\{0\} \- \{1\}|\{0\} \,\{1\}\, And\{2\}|\{0\} \+ \{1\}|\{0\} \* \{1\}|\{0\} Vs \{1\}|\{0\} Sec|\{0\} M/S|\{0\} M|\{0\} And \{1\}|\{0\} &gt;= \{1\}|\{0\} &gt; \{1\}|\{0\} == \{1\}|\{0\} = \{1\}|\{0\} &lt;\-&gt; \{1\}|\{0\} &lt;\-&gt;|\{0\} &lt;\- \{1\}|\{0\} &lt;= \{1\}|\{0\} &lt; \{1\}|\{0\} : \{1\} : \{2\}|\{0\} / \{1\}|\{0\} != \{1\}|\?\?\?|\?\?|\?|\.\.\.|\-\-\-\-\-\-\-\-\-\-|\-&gt; \{0\}|\*|\(\{0\}\)|\#\{0\}|Zones|Zone|You Win|You Lose|You|Yes|Wow|Worse|Wins|Winners|Winner|Win|West|Well Played|Warning|Walls|Wall|Waiting|Wait|Vortices|Vortex|Visible|Victory|Use Ultimate Ability|Use Ability 2|Use Ability 1|Uploading|Uploaded|Upload|Upgrades|Upgrade|Up|Unstable|Unsafe|Unlocking|Unlocked|Unlock|Unlimited|Unknown|Under|Ultimate Ability|Ugh|Turrets|Turret|Try Again|Transferring|Transferred|Transfer|Traitors|Traitor|Trading|Traded|Trade|Total|Times|Time|Tiebreaker|Threats|Threat Levels|Threat Level|Threat|That Was Awesome|Thanks|Thank You|Terrible|Teams|Teammates|Teammate|Team|Targets|Target|Surviving|Survived|Survive|Superb|Sunk|Sudden Death|Success|Suboptimal|Stunning|Stunned|Stun|Stopping|Stopped|Stop|Stay Away|Status|Starting|Started|Start|Stars|Star|Stable|Stabilizing|Stabilized|Stabilize|Spheres|Sphere|Spawning|Spawned|Spawn|Sparkles|Southwest|Southeast|South|Sorry|Sold|Slowest|Slower|Slow|Slept|Sleeping|Sleep|Sinking|Sink|Severing|Severed|Severe|Sever|Selling|Sell|Securing|Secured|Secure|Scores|Score|Saving|Saved|Save|Safe|Running|Run|Rounds Won|Rounds Lost|Rounds|Round \{0\}|Round|Right|Revealing|Revealed|Reveal|Resurrecting|Resurrected|Resurrect|Rescuing|Rescued|Rescue|Remaining|Remain|Recovering|Recovered|Recover|Records|Record|Ready|Rank G|Rank F|Rank E|Rank D|Rank C|Rank B|Rank A|Rank|Raising|Raised|Raise|Purifying|Purify|Purified|Protecting|Protected|Protect|Price|Power\-Ups|Power\-Up|Points Lost|Points Earned|Points|Point|Players|Players|Player|Player|Picking|Picked|Pick|Phases|Phase|Payloads|Payload|Overtime|Over|Outside|Outgoing|Out Of View|Optimizing|Optimized|Optimize|Optimal|Oops|Oof|On|Off|Obtaining|Obtained|Obtain|Objects|Objectives|Objective|Object|Not Today|Northwest|Northeast|North|Normal|None|No Thanks|No|Nice Try|Next Upgrade|Next Targets|Next Target|Next Round|Next Players|Next Player|Next Phase|Next Objects|Next Objective|Next Object|Next Mission|Next Level|Next Hostages|Next Hostage|Next Heroes|Next Hero|Next Game|Next Form|Next Enemy|Next Enemies|Next Checkpoint|Next Attempt|Next Ally|Next Allies|Next|New Record|New High Score|Near|My Mistake|Most|More|Money|Moderate|Missions|Mission Failed|Mission Accomplished|Mission Aborted|Mission|Mission|Min|Mild|Max|Losses|Loss|Losers|Loser|Locking|Locked|Lock|Loading|Loaded|Load|Lives|Limited|Life|Levels|Level|Less|Left|Least|Leaders|Leader|Killstreaks|Killstreak|Kills|Kill|Jumping|Jump|Joining|Joined|Join|Items|Item|Invisible|Inside|Innocent|Initial Upgrade|Initial Targets|Initial Target|Initial Round|Initial Players|Initial Player|Initial Phase|Initial Objects|Initial Objective|Initial Object|Initial Mission|Initial Level|Initial Hostage|Initial Heroes|Initial Hero|Initial Game|Initial Form|Initial Enemy|Initial Enemies|Initial Checkpoint|Initial Attempt|Initial Ally|Initial Allies|Initial|Incoming|In View|I Tried|I Give Up|Hunting|Hunters|Hunter|Hunted|Hunt|Huh|Hostages|Hostage|Hmmm|High Scores|High Score|Hiding|Hide|Hidden|Heroes|Hero|Here|Help|Hello|Healing|Healers|Healer|Healed|Heal|Hacking|Hacked|Hack|Guilty|Goodbye|Good Luck|Good|Going|Goals|Goal|Go|Gg|Games Won|Games Lost|Games|Game|Frozen|Freezing|Freeze|Found|Forward|Forms|Form|Flying|Fly|Flown|Finishing|Finished|Finish|Finding|Find|Final Upgrade|Final Time|Final Targets|Final Target|Final Round|Final Players|Final Player|Final Phase|Final Objects|Final Objective|Final Object|Final Mission|Final Level|Final Item|Final Hostages|Final Hostage|Final Heroes|Final Hero|Final Game|Final Form|Final Enemy|Final Enemies|Final Checkpoint|Final Attempt|Final Ally|Final Allies|Final|Faults|Fault|Fastest|Faster|Fast|Far|Falling|Fallen|Fall|Failure|Failing|Failed|Extreme|Exit|Excellent|Escorting|Escorted|Escort|Entrance|Enemy|Enemies|Eliminations|Elimination|Eliminating|Eliminated|Eliminate|East|Dying|Dropping|Dropped|Drop|Draw|Downloading|Downloaded|Download|Down|Domes|Dome|Dodging|Dodged|Dodge|Distances|Distance|Disconnecting|Disconnected|Disconnect|Die|Destroying|Destroyed|Destroy|Destabilizing|Destabilized|Destabilize|Delivering|Delivered|Deliver|Defending|Defended|Defend|Defeat|Dead|Danger|Damaging|Damaged|Damage|Current Upgrade|Current Targets|Current Target|Current Round|Current Players|Current Player|Current Phase|Current Objects|Current Objective|Current Object|Current Mission|Current Level|Current Hostages|Current Hostage|Current Heroes|Current Hero|Current Game|Current Form|Current Enemy|Current Enemies|Current Checkpoint|Current Attempt|Current Ally|Current Allies|Current|Crouching|Crouched|Crouch|Critical|Credits|Credit|Corrupting|Corrupted|Corrupt|Cooldowns|Cooldown|Control Points|Control Point|Connecting|Connected|Connect|Congratulations|Condition|Come Here|Clouds|Cloud|Checkpoints|Checkpoint|Chasing|Chased|Chase|Challenge Accepted|Center|Caution|Capturing|Captured|Capture|Buying|Buy|Burnt|Burning|Burn|Built|Building|Build|Bought|Bosses|Boss|Better|Best|Banning|Banned|Ban|Bad|Backward|Avoiding|Avoided|Avoid|Average|Attempts|Attempt|Attacking|Attacked|Attack|Ally|Allies|Alive|Alert|Ability 2|Ability 1|Ability|Abilities|&lt;\-&gt; \{0\}|&lt;\- \{0\}|!!!|!!|!)&quot;)</string>
+          <key>name</key>
+          <string>constant.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(Z Component Of|Y Component Of|X Component Of|World Vector Of|Victim|Vertical Speed Of|Vertical Facing Angle Of|Vertical Angle Towards|Vertical Angle From Direction|Velocity Of|Vector Towards|Vector|Value In Array|Up|Ultimate Charge Percent|True|Total Time Elapsed|Throttle Of|Team Score|Team Of|Team|Subtract|String|Square Root|Speed Of In Direction|Speed Of|Sorted Array|Slot Of|Sine From Radians|Sine From Degrees|Score Of|Round To Integer|Right|Remove From Array|Ray Cast Hit Position|Ray Cast Hit Player|Ray Cast Hit Normal|Randomized Array|Random Value In Array|Random Real|Random Integer|Raise To Power|Position Of|Point Capture Percentage|Players Within Radius|Players On Hero|Players In View Angle|Players In Slot|Player Variable|Player Closest To Reticle|Player Carrying Flag|Payload Progress Percentage|Payload Position|Or|Opposite Team Of|Objective Position|Objective Index|Number Of Players On Objective|Number Of Players|Number Of Living Players|Number Of Heroes|Number Of Final Blows|Number Of Eliminations|Number Of Deaths|Number Of Dead Players|Number|Null|Not|Normalize|Nearest Walkable Position|Multiply|Modulo|Min|Max Health|Max|Match Time|Match Round|Local Vector Of|Left|Last Text Id|Last Of|Last Heal Over Time Id|Last Damage Over Time Id|Last Damage Modification Id|Last Created Entity|Is Waiting For Players|Is Using Ultimate|Is Using Ability 2|Is Using Ability 1|Is True For Any|Is True For All|Is Team On Offense|Is Team On Defense|Is Standing|Is Portrait On Fire|Is On Wall|Is On Objective|Is On Ground|Is Objective Complete|Is Moving|Is Match Complete|Is In View Angle|Is In Spawn Room|Is In Setup|Is In Line Of Sight|Is In Air|Is Hero Being Played|Is Game In Progress|Is Flag Being Carried|Is Flag At Base|Is Firing Secondary|Is Firing Primary|Is Dead|Is Ctf Mode In Sudden Death|Is Crouching|Is Control Mode Point Locked|Is Communicating Any Voice Line|Is Communicating Any Emote|Is Communicating Any|Is Communicating|Is Button Held|Is Between Rounds|Is Assembling Heroes|Is Alive|Index Of Array Value|Horizontal Speed Of|Horizontal Facing Angle Of|Horizontal Angle Towards|Horizontal Angle From Direction|Hero Of|Hero Icon String|Hero|Health Percent|Health|Has Status|Has Spawned|Global Variable|Forward|Flag Position|First Of|Filtered Array|Farthest Player From|False|Facing Direction Of|Eye Position|Event Was Critical Hit|Event Player|Event Damage|Entity Exists|Empty Array|Down|Dot Product|Divide|Distance Between|Direction Towards|Direction From Angles|Current Array Element|Cross Product|Count Of|Cosine From Radians|Cosine From Degrees|Control Mode Scoring Team|Control Mode Scoring Percentage|Compare|Closest Player To|Backward|Attacker|Array Slice|Append To Array|Angle Difference|And|Altitude Of|Allowed Heroes|All Players On Objective|All Players Not On Objective|All Players|All Living Players|All Heroes|All Dead Players|Add|Absolute Value)</string>
+          <key>name</key>
+          <string>keyword value.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(Wait|Unpause Match Time|Teleport|Stop Holding Button|Stop Heal Over Time|Stop Forcing Throttle|Stop Forcing Spawn Room|Stop Forcing Player To Be Hero|Stop Facing|Stop Damage Over Time|Stop Damage Modification|Stop Chasing Player Variable|Stop Chasing Global Variable|Stop Camera|Stop All Heal Over Time|Stop All Damage Over Time|Stop All Damage Modifications|Stop Accelerating|Start Holding Button|Start Heal Over Time|Start Forcing Throttle|Start Forcing Spawn Room|Start Forcing Player To Be Hero|Start Facing|Start Damage Over Time|Start Damage Modification|Start Camera|Start Accelerating|Small Message|Skip If|Skip|Set Ultimate Charge|Set Ultimate Ability Enabled|Set Team Score|Set Status|Set Slow Motion|Set Secondary Fire Enabled|Set Secondary Fire Enabled|Set Respawn Max Time|Set Projectile Speed|Set Projectile Gravity|Set Primary Fire Enabled|Set Player Variable At Index|Set Player Variable|Set Player Score|Set Player Allowed Heroes|Set Objective Description|Set Move Speed|Set Max Health|Set Match Time|Set Invisible|Set Healing Received|Set Healing Dealt|Set Gravity|Set Global Variable At Index|Set Global Variable|Set Facing|Set Damage Received|Set Damage Dealt|Set Aim Speed|Set Ability 2 Enabled|Set Ability 1 Enabled|Resurrect|Respawn|Reset Player Hero Availability|Press Button|Preload Hero|Play Effect|Pause Match Time|Modify Team Score|Modify Player Variable|Modify Player Score|Modify Global Variable|Loop If Condition Is True|Loop If Condition Is False|Loop If|Loop|Kill|Heal|Go To Assemble Heroes|Enable Death Spectate Target Hud|Enable Death Spectate All Players|Enable Built-In Game Mode Scoring|Enable Built-In Game Mode Respawning|Enable Built-In Game Mode Music|Enable Built-In Game Mode Completion|Enable Built-In Game Mode Announcer|Disallow Button|Disable Death Spectate Target Hud|Disable Death Spectate All Players|Disable Built-In Game Mode Scoring|Disable Built-In Game Mode Respawning|Disable Built-In Game Mode Music|Disable Built-In Game Mode Completion|Disable Built-In Game Mode Announcer|Destroy In-World Text|Destroy Icon|Destroy Hud Text|Destroy Effect|Destroy All In-World Text|Destroy All Icons|Destroy All Hud Text|Destroy All Effects|Declare Team Victory|Declare Round Victory|Declare Player Victory|Declare Match Draw|Damage|Create In-World Text|Create Icon|Create Hud Text|Create Effect|Communicate|Clear Status|Chase Player Variable Over Time|Chase Player Variable At Rate|Chase Global Variable Over Time|Chase Global Variable At Rate|Big Message|Apply Impulse|Allow Button|Abort If Condition Is True|Abort If Condition Is False|Abort If|Abort)</string>
+          <key>name</key>
+          <string>keyword action.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(rule)</string>
+          <key>name</key>
+          <string>keyword rule.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(rule)</string>
+          <key>name</key>
+          <string>keyword rule.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(rule)</string>
+          <key>name</key>
+          <string>keyword rule.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>((Transformation|Invisible To|Color|Button|Operation|Event|String Constant|Team Constant|Hero Constant|Event Player|Variable|Play Effect|Create Effect|Communicate|Icon|Relative|Motion|Rounding Type|Los Check|World Text Clipping|Hud Location|Icon Reevaluation|Effect Reevaluation|Hud Text Reevaluation|World Text Reevaluation|Chase Rate Reevaluation|Chase Time Reevaluation|Objective Description Reevaluation|Damage Modification Reevaluation|Wait Behavior|Barriers Los|Status|Compare Operator|Base|Boolean|Hero|Number|Direction|Position|Player|Team))</string>
+          <key>name</key>
+          <string>constant.overwatch</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(¿\{0\}\?|¡\{0\}!|\{0\}\?\?\?|\{0\}\?\?|\{0\}\?|\{0\}\, \{1\}|\{0\}:\{1\}|\{0\}:\{1\}|\{0\}: \{1\} And \{2\}|\{0\}: \{1\}|\{0\}:|\{0\}%|\{0\}!!!|\{0\}!!|\{0\}!|\{0\} \{1\} \{2\}|\{0\} \-&gt; \{1\}|\{0\} \-&gt;|\{0\} \- \{1\} \- \{2\}|\{0\} \- \{1\}|\{0\} \,\{1\}\, And\{2\}|\{0\} \+ \{1\}|\{0\} \* \{1\}|\{0\} Vs \{1\}|\{0\} Sec|\{0\} M\/S|\{0\} M|\{0\} And \{1\}|\{0\} &gt;= \{1\}|\{0\} &gt; \{1\}|\{0\} == \{1\}|\{0\} = \{1\}|\{0\} &lt;\-&gt; \{1\}|\{0\} &lt;\-&gt;|\{0\} &lt;\- \{1\}|\{0\} &lt;= \{1\}|\{0\} &lt; \{1\}|\{0\} : \{1\} : \{2\}|\{0\} \/ \{1\}|\{0\} != \{1\}|\?\?\?|\?\?|\?|\.\.\.|\-\-\-\-\-\-\-\-\-\-|\-&gt; \{0\}|\*|\(\{0\}\)|\#\{0\}|Zones|Zone|Zenyatta|Zenyatta|Zarya|Zarya|Z Component Of|You Win|You Lose|You|Yes|Yellow|Y Component Of|X Component Of|Wrecking Ball|Wrecking Ball|Wow|Worse|World Vector Of|Winston|Winston|Wins|Winners|Winner|Win|Widowmaker|Widowmaker|White|West|Well Played|Warning|Warning|Walls|Wall|Waiting|Wait|Vortices|Vortex|Voice Line Up|Voice Line Right|Voice Line Left|Voice Line Down|Visible To\, Position\, And String|Visible To\, Position\, And Radius|Visible To And String|Visible To And String|Visible To And String|Visible To And Position|Visible To|Visible To|Visible|Victory|Victim|Vertical Speed Of|Vertical Facing Angle Of|Vertical Angle Towards|Vertical Angle From Direction|Vector Towards|Vector|Value In Array|Use Ultimate Ability|Use Ability 2|Use Ability 1|Uploading|Uploaded|Upload|Upgrades|Upgrade|Up|Up|Up|Unstable|Unsafe|Unlocking|Unlocked|Unlock|Unlimited|Unknown|Unkillable|Under|Ultimate Status|Ultimate Charge Percent|Ultimate Ability|Ultimate|Ugh|Turrets|Turret|Try Again|True|Trashcan|Transferring|Transferred|Transfer|Traitors|Traitor|Trading|Traded|Trade|Tracer|Tracer|Total Time Elapsed|Total|TorbjÖRn|TorbjÖRn|Top|To World|To Player|To Nearest|Times|Time|Tiebreaker|Throttle Of|Threats|Threat Levels|Threat Level|Threat|That Was Awesome|Thanks|Thanks|Thank You|Terrible|Teams|Teammates|Teammate|Team Score|Team Of|Team 2|Team 2|Team 1|Team 1|Team|Team|Targets|Target|Symmetra|Symmetra|Surviving|Survived|Survive|Surfaces And Enemy Barriers|Surfaces And All Barriers|Surfaces|Superb|Sunk|Sudden Death|Success|Subtract|Subtract|Suboptimal|Stunning|Stunned|Stunned|Stun|String|String|String|Stopping|Stopped|Stop|Stop|Stay Away|Status|Starting|Started|Start|Stars|Star|Stable|Stabilizing|Stabilized|Stabilize|Square Root|Spiral|Spheres|Sphere|Sphere|Speed Of In Direction|Speed Of|Spawning|Spawned|Spawn|Sparkles Sound|Sparkles|Sparkles|Spade|Southwest|Southeast|South|Sorted Array|Sorry|Sombra|Sombra|Soldier: 76|Soldier: 76|Sold|Smoke Sound|Slowest|Slower|Slow|Slot Of|Slot 9|Slot 8|Slot 7|Slot 6|Slot 5|Slot 4|Slot 3|Slot 2|Slot 11|Slot 10|Slot 1|Slot 0|Slept|Sleeping|Sleep|Skull|Sinking|Sink|Sine From Radians|Sine From Degrees|Severing|Severed|Severe|Sever|Selling|Sell|Securing|Secured|Secure|Secondary Fire|Scores|Score Of|Score|Saving|Saved|Save|Safe|Sad|Running|Run|Rounds Won|Rounds Lost|Rounds|Round \{0\}|Round To Integer|Round|Rotation And Translation|Rotation|Rooted|Roadhog|Roadhog|Ring Thin|Ring Thick|Ring Explosion Sound|Ring Explosion|Ring|Right|Right|Right|Revealing|Revealed|Reveal|Resurrecting|Resurrected|Resurrect|Restart When True|Rescuing|Rescued|Rescue|Remove From Array By Value|Remove From Array By Index|Remove From Array|Remaining|Remain|Reinhardt|Reinhardt|Red|Recycle|Recovering|Recovered|Recover|Records|Record|Receivers\, Damagers\, And Damage Percent|Receivers And Damagers|Reaper|Reaper|Ready|Ray Cast Hit Position|Ray Cast Hit Player|Rank G|Rank F|Rank E|Rank D|Rank C|Rank B|Rank A|Rank|Randomized Array|Random Value In Array|Random Real|Random Integer|Raising|Raised|Raise To Power|Raise To Power|Raise|Radioactive|Question Mark|Purple|Purifying|Purify|Purified|Protecting|Protected|Protect|Primary Fire|Price|Power\-Ups|Power\-Up|Position Of|Position And Radius|Position|Poison 2|Poison|Points Lost|Points Earned|Points|Point Capture Percentage|Point|Plus|Players Within Radius|Players On Hero|Players In View Angle|Players In Slot|Players|Players|Player Variable|Player Took Damage|Player Earned Elimination|Player Died|Player Dealt Final Blow|Player Dealt Damage|Player Closest To Reticle|Player Carrying Flag|Player|Player|Picking|Picked|Pick\-Up Sound|Pick|Phases|Phased Out|Phase|Pharah|Pharah|Payloads|Payload Progress Percentage|Payload Position|Payload|Overtime|Over|Outside|Outgoing|Out Of View|Orisa|Orisa|Orb|Or|Optimizing|Optimized|Optimize|Optimal|Opposite Team Of|Oops|Oof|Ongoing \- Global|Ongoing \- Each Player|On|Off|Off|Obtaining|Obtained|Obtain|Objects|Objectives|Objective Position|Objective Index|Objective|Object|Number Of Players On Objective|Number Of Players|Number Of Living Players|Number Of Heroes|Number Of Final Blows|Number Of Eliminations|Number Of Deaths|Number Of Dead Players|Number|Null|Not Today|Not|Northwest|Northeast|North|Normalize|Normal|None|None|None|None|None|None|None|No Thanks|No|No|Nice Try|Next Upgrade|Next Targets|Next Target|Next Round|Next Players|Next Player|Next Phase|Next Objects|Next Objective|Next Object|Next Mission|Next Level|Next Hostages|Next Hostage|Next Heroes|Next Hero|Next Game|Next Form|Next Enemy|Next Enemies|Next Checkpoint|Next Attempt|Next Ally|Next Allies|Next|New Record|New High Score|Need Healing|Nearest Walkable Position|Near|My Mistake|Multiply|Multiply|Most|More|Moon|Money|Moira|Moira|Modulo|Modulo|Moderate|Missions|Mission Failed|Mission Accomplished|Mission Aborted|Mission|Mission|Min|Min|Min|Mild|Mercy|Mercy|Mei|Mei|Mccree|Mccree|Max Health|Max|Max|Max|Match Time|Match Round|LÚCio|LÚCio|Losses|Loss|Losers|Loser|Locking|Locked|Lock|Local Vector Of|Loading|Loaded|Load|Lives|Limited|Light Shaft|Life|Levels|Level|Less|Left|Left|Left|Least|Leaders|Leader|Last Text Id|Last Of|Last Heal Over Time Id|Last Damage Over Time Id|Last Damage Modification Id|Last Created Entity|Knocked Down|Killstreaks|Killstreak|Kills|Kill|Junkrat|Junkrat|Jumping|Jump|Jump|Joining|Joined|Join|Items|Item|Is Waiting For Players|Is Using Ultimate|Is Using Ability 2|Is Using Ability 1|Is True For Any|Is True For All|Is Team On Offense|Is Team On Defense|Is Standing|Is Portrait On Fire|Is On Wall|Is On Objective|Is On Ground|Is Objective Complete|Is Moving|Is Match Complete|Is In View Angle|Is In Spawn Room|Is In Setup|Is In Line Of Sight|Is In Air|Is Hero Being Played|Is Game In Progress|Is Flag Being Carried|Is Flag At Base|Is Firing Secondary|Is Firing Primary|Is Dead|Is Ctf Mode In Sudden Death|Is Crouching|Is Control Mode Point Locked|Is Communicating Any Voice Line|Is Communicating Any Emote|Is Communicating Any|Is Communicating|Is Button Held|Is Between Rounds|Is Assembling Heroes|Is Alive|Invisible|Invincible|Interact|Inside|Innocent|Initial Upgrade|Initial Targets|Initial Target|Initial Round|Initial Players|Initial Player|Initial Phase|Initial Objects|Initial Objective|Initial Object|Initial Mission|Initial Level|Initial Hostage|Initial Heroes|Initial Hero|Initial Game|Initial Form|Initial Enemy|Initial Enemies|Initial Checkpoint|Initial Attempt|Initial Ally|Initial Allies|Initial|Index Of Array Value|Incorporate Contrary Motion|Incoming|In View|Ignore Condition|I Tried|I Give Up|Hunting|Hunters|Hunter|Hunted|Hunt|Huh|Hostages|Hostage|Horizontal Speed Of|Horizontal Facing Angle Of|Horizontal Angle Towards|Horizontal Angle From Direction|Hmmm|High Scores|High Score|Hiding|Hide|Hidden|Heroes|Hero Of|Hero|Hero|Here|Help|Hello|Hello|Heart|Health Percent|Health|Healing|Healers|Healer|Healed|Heal|Has Status|Has Spawned|Happy|Hanzo|Hanzo|Halo|Hacking|Hacked|Hacked|Hack|Guilty|Group Up|Green|Goodbye|Good Pickup Effect|Good Luck|Good Explosion|Good Aura Sound|Good Aura|Good|Going|Goals|Goal|Go|Global Variable|Gg|Genji|Genji|Games Won|Games Lost|Games|Game|Frozen|Frozen|Freezing|Freeze|Found|Forward|Forward|Forms|Form|Flying|Fly|Flown|Flag Position|Flag|First Of|Fire|Finishing|Finished|Finish|Finding|Find|Final Upgrade|Final Time|Final Targets|Final Target|Final Round|Final Players|Final Player|Final Phase|Final Objects|Final Objective|Final Object|Final Mission|Final Level|Final Item|Final Hostages|Final Hostage|Final Heroes|Final Hero|Final Game|Final Form|Final Enemy|Final Enemies|Final Checkpoint|Final Attempt|Final Ally|Final Allies|Final|Filtered Array|Faults|Fault|Fastest|Faster|Fast|Farthest Player From|Far|False|Falling|Fallen|Fall|Failure|Failing|Failed|Facing Direction Of|Eye Position|Eye|Extreme|Explosion Sound|Exit|Exclamation Mark|Excellent|Event Was Critical Hit|Event Player|Event Damage|Escorting|Escorted|Escort|Entrance|Entity Exists|Energy Sound|Enemy Barriers Block Los|Enemy|Enemies|Enemies|Empty Array|Emote Up|Emote Right|Emote Left|Emote Down|Eliminations|Elimination|Eliminating|Eliminated|Eliminate|East|Dying|Dropping|Dropped|Drop|Draw|Downloading|Downloaded|Download|Down|Down|Down|Dot Product|Doomfist|Doomfist|Domes|Dome|Dodging|Dodged|Dodge|Do Not Clip|Dizzy|Divide|Divide|Distances|Distance Between|Distance|Disconnecting|Disconnected|Disconnect|Direction Towards|Direction From Angles|Die|Diamond|Destroying|Destroyed|Destroy|Destination And Rate|Destination And Duration|Destabilizing|Destabilized|Destabilize|Delivering|Delivered|Deliver|Defending|Defended|Defend|Defeat|Decal Sound|Debuff Impact Sound|Dead|Danger|Damaging|Damaged|Damage|D\.Va|D\.Va|Current Upgrade|Current Targets|Current Target|Current Round|Current Players|Current Player|Current Phase|Current Objects|Current Objective|Current Object|Current Mission|Current Level|Current Hostages|Current Hostage|Current Heroes|Current Hero|Current Game|Current Form|Current Enemy|Current Enemies|Current Checkpoint|Current Attempt|Current Array Element|Current Ally|Current Allies|Current|Crouching|Crouched|Crouch|Crouch|Cross Product|Critical|Credits|Credit|Count Of|Cosine From Radians|Cosine From Degrees|Corrupting|Corrupted|Corrupt|Cooldowns|Cooldown|Control Points|Control Point|Control Mode Scoring Team|Control Mode Scoring Percentage|Connecting|Connected|Connect|Congratulations|Condition|Compare|Come Here|Club|Clouds|Cloud|Cloud|Closest Player To|Clip Against Surfaces|Circle|Checkpoints|Checkpoint|Checkmark|Chasing|Chased|Chase|Challenge Accepted|Center|Caution|Capturing|Captured|Capture|Cancel Contrary Motion|Buying|Buy|Burnt|Burning|Burning|Burn|Built|Building|Build|Buff Impact Sound|Buff Explosion Sound|Brigitte|Brigitte|Bought|Bosses|Boss|Bolt|Blue|Better|Best|Beacon Sound|Bastion|Bastion|Barriers Do Not Block Los|Baptiste|Baptiste|Banning|Banned|Ban|Bad Pickup Effect|Bad Explosion|Bad Aura Sound|Bad Aura|Bad|Backward|Backward|Avoiding|Avoided|Avoid|Average|Attempts|Attempt|Attacking|Attacker|Attacked|Attack|Asterisk|Asleep|Ashe|Ashe|Arrow: Up|Arrow: Right|Arrow: Left|Arrow: Down|Array Slice|Array Contains|Append To Array|Append To Array|Angle Difference|And|Ana|Ana|Altitude Of|Ally|Allowed Heroes|Allies|All Players On Objective|All Players Not On Objective|All Players|All Living Players|All Heroes|All Dead Players|All Barriers Block Los|All|All|All|Alive|Alert|Add|Add|Acknowledge|Absolute Value|Abort When False|Ability 2|Ability 2|Ability 1|Ability 1|Ability|Abilities|&gt;=|&gt;|==|&lt;\-&gt; \{0\}|&lt;\- \{0\}|&lt;=|&lt;|!=|!!!|!!|!)</string>
+          <key>name</key>
+          <string>constant.overwatch</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#numeric</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>([\;\{\}\(\)\[\]\,])</string>
+          <key>name</key>
+          <string>punctuation.overwatch</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#multi_line_comment</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(//.*)</string>
+          <key>name</key>
+          <string>comment.overwatch</string>
+        </dict>
+       </array>
+    </dict>
+    <key>multi_line_comment</key>
+    <dict>
+      <key>patterns</key>
+      <array> 
+        <dict>
+          <key>begin</key>
+          <string>(/\*)</string>
+          <key>beginCaptures</key>
+          <dict>
+            <key>1</key>
+            <dict>
+              <key>name</key>
+              <string>comment.overwatch</string>
+            </dict>
+          </dict>
+          <key>contentName</key>
+          <string>comment.overwatch</string>
+          <key>end</key>
+          <string>(\*/)</string>
+          <key>endCaptures</key>
+          <dict>
+            <key>1</key>
+            <dict>
+              <key>name</key>
+              <string>comment.overwatch</string>
+            </dict>
+          </dict>
+        </dict>
+       </array>
+    </dict>
+    <key>multi_line_comment__1</key>
+    <dict>
+      <key>patterns</key>
+      <array> 
+       </array>
+    </dict>
+    <key>numeric</key>
+    <dict>
+      <key>patterns</key>
+      <array> 
+        <dict>
+          <key>match</key>
+          <string>(\b\d+)</string>
+          <key>name</key>
+          <string>constant.numeric.overwatch</string>
+        </dict>
+       </array>
+    </dict>
+  </dict>
+</dict>
+</plist>

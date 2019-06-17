@@ -15,10 +15,10 @@ import {
 
 import {
 	TextDocument, Position, CompletionList, Range, SymbolInformation, Diagnostic,
-	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind, DocumentSymbolParams, SymbolKind
+	TextEdit, FormattingOptions, MarkedString, DocumentSymbol, MarkupContent, MarkupKind, DocumentSymbolParams, SymbolKind, SignatureHelp
 } from 'vscode-languageserver-types';
 
-import { getCompletionItems, resolveCompletionItem, hoverHandler, resolveSymbols} from './overwatch'
+import { getCompletionItems, resolveCompletionItem, hoverHandler, resolveSymbols, signatureHelp} from './overwatch'
 
 const connection: IConnection = createConnection(	
 	new IPCMessageReader(process),
@@ -36,7 +36,7 @@ connection.onInitialize((params): InitializeResult => {
 		hoverProvider: true,
 		documentSymbolProvider: true,
 		signatureHelpProvider: {
-			triggerCharacters: ['('],
+			triggerCharacters: ['(', ','],
 	  	},
 		completionProvider: {
 		  resolveProvider: true
@@ -78,6 +78,14 @@ connection.onHover(
 	}
 )
 
+connection.onSignatureHelp((params: TextDocumentPositionParams) : SignatureHelp => {
+	var doc = documents.get(params.textDocument.uri);
+	let pos = params.position;
+
+	if(doc == null || pos == null) {return {signatures:[],activeParameter:null,activeSignature:null}}
+
+	return signatureHelp(params, doc, pos)
+})
 
 connection.onDocumentSymbol((params: DocumentSymbolParams) : SymbolInformation[] => {
 	var doc = documents.get(params.textDocument.uri);
@@ -90,7 +98,7 @@ connection.onDocumentSymbol((params: DocumentSymbolParams) : SymbolInformation[]
 
   
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-	return resolveCompletionItem(item.data)
+	return resolveCompletionItem(item)
 })
 
   
