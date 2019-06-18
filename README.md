@@ -7,6 +7,13 @@ This project intends to extend VSC to be a fully featured IDE for text-based wor
 
 Message me at `Vice#5333` on Discord if you have any questions (as I probably won't respond quickly here), or come hang out in [Jayne's workshop Discord](https://discord.gg/qft8x2X), where I'll also be posting updates.
 
+## Instructions
+
+- Download and install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=vicerust.overwatch&ssr=false).
+- Make a new file, and save it as `test.ow`. The `.ow` extension is necessary.
+- VS Code should recognize the extension and activate the language server. If it doesn't, you may have to manually change the language in the bottom right corner.
+- Code away
+
 ## To-do List
 
 As it stands, the extension is fairly complete, save for a few minor bugs, annoyances, etc. If there's something weird and fucked up, it's probably just me forgetting something, so let me know.
@@ -20,6 +27,12 @@ As it stands, the extension is fairly complete, save for a few minor bugs, annoy
 - [x] Type checking
 - [ ] Document Outline
 - [ ] Fix all the bugs lol
+
+## Known Bugs
+
+- The theme is really janky and seems to change the theme throughout VS Code. I'll work on fixing it, but this language needs a custom theme for proper highlighting.
+- Function scopes glitch out sometimes because the script for detecting them is an ungodly mess. I may consider rewriting it, but I need more booze.
+- Probably a lot of other stuff I'm sure I'll hear about
 
 ## Running the Extension
 
