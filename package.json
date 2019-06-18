@@ -1,18 +1,24 @@
 {
 	"name": "overwatch",
-	"description": "Support for Overwatch Workshop syntax",
+	"displayName": "Overwatch",
+	"description": "Support for Overwatch Workshop syntax in VS Code. Autocomplete, type checking, documentation, tooltips, etc. ",
 	"author": "Vice",
 	"license": "MIT",
 	"version": "0.1.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/vicerust/owlang"
 	},
 	"publisher": "vicerust",
-	"categories": [],
+	"categories": ["Programming Languages", "Formatters", "Themes"],
 	"keywords": [
-		"multi-root ready"
+		"Overwatch Workshop"
 	],
+	"icon": "lucio.png",
+	"galleryBanner": {
+		"color": "#111111",
+		"theme": "dark"
+	},
 	"engines": {
 		"vscode": "^1.23.0"
 	},

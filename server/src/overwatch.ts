@@ -284,53 +284,5 @@ export function resolveSymbols(uri: string, doc: TextDocument): SymbolInformatio
 	
 
 
-	return [
-		{
-			name: 'Reset on Floor Touch',
-			kind: SymbolKind.Method,
-			location: {
-				uri: uri,
-				range: {
-					start: { line: 0, character: 0},
-					end: { line: 31, character: 1}
-				}
-			}
-		},
-		{
-			name: 'Event',
-			kind: SymbolKind.EnumMember,
-			containerName: 'Reset on Floor Touch',
-			location: {
-				uri: uri,
-				range: {
-					start: { line: 2, character: 4},
-					end: { line: 7, character: 4}
-				}
-			}
-		},
-		{
-			name: 'Conditions',
-			kind: SymbolKind.Enum,
-			containerName: 'Reset on Floor Touch',
-			location: {
-				uri: uri,
-				range: {
-					start: { line: 9, character: 4},
-					end: { line: 18, character: 4}
-				}
-			}
-		},
-		{
-			name: 'Actions',
-			kind: SymbolKind.String,
-			containerName: 'Reset on Floor Touch',
-			location: {
-				uri: uri,
-				range: {
-					start: { line: 20, character: 4},
-					end: { line: 30, character: 4}
-				}
-			}
-		},
-	]
+	return []
 }
